@@ -54,3 +54,42 @@ button {
     font-size: clamp(1rem, 3.5vw, 1.2rem);
     line-height: 1.6;
 }
+* Hidden content */
+.hidden {
+    display: none;
+    width: 90%;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    color: white;
+    text-align: center;
+    background: rgba(0,0,0,0.5) /* adds readability over image */
+    border-radius: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header inside hidden content */
+.hidden-header {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    margin-bottom: 1rem;
+}
+
+/* Message inside hidden content */
+.hidden-message {
+    font-size: clamp(1rem, 3.5vw, 1.2rem);
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive background image positioning for hidden content */
+@media (min-width: 768px) {
+    body {
+        background-position: center top; /* shows head on desktop */
+    }
+}
